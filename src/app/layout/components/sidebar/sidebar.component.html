@@ -1,0 +1,219 @@
+<div [ngClass]="classManager.getClass()" class="parallaxie">
+    <router-outlet/>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="personal-contact-box" data-aos="fade-right" data-aos-duration="1000">
+                    <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action"
+                           [ngClass]="{ active: currentSection === 'list-item-1' }" [ngxScrollTo]="'#list-item-1'"
+                           href="javascript:void(0);" (click)="setActiveLink('list-item-1')">
+                            <img src="assets/img/icons/home1.svg" alt=""/>
+                            <span>Inicio</span>
+                        </a>
+                        <a class="list-group-item list-group-item-action" [ngxScrollTo]="'#list-item-2'"
+                           [ngClass]="{ active: currentSection === 'list-item-2' }" href="javascript:void(0);"
+                           (click)="setActiveLink('list-item-2')">
+                            <img src="assets/img/icons/home2.svg" alt=""/>
+                            <span>Sobre mí</span>
+                        </a>
+                        <a class="list-group-item list-group-item-action"
+                           [ngClass]="{ active: currentSection === 'list-item-3' }" [ngxScrollTo]="'#list-item-3'"
+                           href="javascript:void(0);" (click)="setActiveLink('list-item-3')">
+                            <img src="assets/img/icons/home4.svg" alt=""/>
+                            <span>Mis Habilidades</span>
+                        </a>
+                    </div>
+                    <div class="img1 image-anime reveal" appGsapReveal>
+                        <img [src]="data.generalInfo.assets.profile.image" alt="">
+                    </div>
+                    <div class="space18"></div>
+                    <h3>{{ data.generalInfo.shortName }}</h3>
+                    <div class="space16"></div>
+                    <p>
+                        {{ data.generalInfo.shortDescription }}
+                    </p>
+                    <div class="space32"></div>
+                    <ul>
+                        <li>
+                            <a [href]="data.generalInfo.socials[0].url">
+                                <img src="assets/img/icons/s-icon3.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a [href]="data.generalInfo.socials[1].url">
+                                <img src="assets/img/icons/s-icon4.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="space44"></div>
+                    <div class="btn-area1 text-center">
+                        <a [href]="data.generalInfo.assets.cv.url" download class="vl-btn1">Descargar CV
+                            <img src="assets/img/icons/download1.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="space32"></div>
+                    <p>© {{ year }} {{ data.generalInfo.shortName }}. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+                     class="scrollspy-example">
+                    <!--===== HERO AREA STARTS =======-->
+                    <div id="list-item-1">
+                        <div class="hero-heading-area heading1">
+                            <h5 data-aos="fade-left" data-aos-duration="800">
+                                <img src="assets/img/icons/sublogo1.svg" alt="">
+                                {{ data.sections.home.title }}
+                            </h5>
+                            <div class="space24"></div>
+                            <h1 data-aos="fade-left" data-aos-duration="900">{{ data.sections.home.subtitle.part1 }}</h1>
+                            <div class="space24"></div>
+                            <h1 class="head" data-aos="fade-left" data-aos-duration="1000">
+                                {{ data.sections.home.subtitle.part2 }} <span>{{ data.sections.home.subtitle.part3 }}</span>
+                            </h1>
+                            <div class="space24"></div>
+                            <p data-aos="fade-left" data-aos-duration="1100">
+                                {{ data.sections.home.description }}
+                            </p>
+                            <div class="space32"></div>
+                        </div>
+                    </div>
+                    <!--===== HERO AREA ENDS =======-->
+                    <div class="space50"></div>
+                    <div id="list-item-2">
+                        <!--===== ABOUT AREA STARTS =======-->
+                        <div class="about-section-area">
+                            <div class="heading1">
+                                <h5 data-aos="fade-left" data-aos-duration="800"><img
+                                    src="assets/img/icons/sublogo1.svg" alt="">
+                                    {{ data.sections.aboutMe.title }}
+                                </h5>
+                                <div class="space24"></div>
+                                <h1 data-aos="fade-left" data-aos-duration="1000">
+                                    {{ data.sections.aboutMe.subtitle.part1 }}
+                                </h1>
+                                <div class="space24"></div>
+                                <h1 class="head" data-aos="fade-left" data-aos-duration="1100">
+                                    {{ data.sections.aboutMe.subtitle.part2 }} <span>{{ data.sections.aboutMe.subtitle.part3 }}</span>
+                                </h1>
+                            </div>
+                            <div class="space60"></div>
+                            <div class="about-boxarea">
+                                <div class="row">
+                                    <div class="col-lg-12" data-aos="fade-left" data-aos-duration="1200">
+                                        <div class="about-main-boxes">
+                                            <h4>{{ data.sections.aboutMe.review.title }}</h4>
+                                            <div class="space24"></div>
+                                            <p>
+                                                {{ data.sections.aboutMe.review.description }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    @for (principal of data.sections.aboutMe.principals; track principal.title) {
+                                        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="900">
+                                                <div class="about-boxes2">
+                                                    <img [src]="principal.icon" alt="">
+                                                    <div class="content-area">
+                                                        <h4>{{ principal.title }}</h4>
+                                                        <div class="space16"></div>
+                                                        <p>
+                                                            {{ principal.description }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    }
+                                    
+                                    <div class="soace20"></div>
+                                    
+                                    <div class="col-lg-6 col-md-6">
+                                        <h3>Experiencia laboral</h3>
+                                        <div class="space32"></div>
+                                        <div class="about-others-box" data-aos="zoom-in" data-aos-duration="900">
+                                            @for (experience of data.sections.aboutMe.workExperience; track experience.positionTitle) {
+                                                <p>{{ experience.period }}</p>
+                                                <br>
+                                                <h4>
+                                                    <a [href]="experience.url ?? 'javascript:void(0);'| appSafeUrl" [target]="experience.url ? '_blank' : ''">
+                                                        {{ experience.positionTitle }}
+                                                    </a>
+                                                </h4>
+                                                <p>{{ experience.companySchool }}</p>
+                                                <div class="space32"></div>
+                                            }
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6">
+                                        <h3>Educación</h3>
+                                        <div class="space32"></div>
+                                        <div class="about-others-box" data-aos="zoom-in" data-aos-duration="1100">
+                                            @for (education of data.sections.aboutMe.educations; track education.positionTitle) {
+                                                <p>{{ education.period }}</p>
+                                                <br>
+                                                <h4>
+                                                    <a [href]="education.url ?? 'javascript:void(0);'| appSafeUrl"
+                                                       [target]="education.url ? '_blank' : ''">
+                                                        {{ education.positionTitle }}
+                                                    </a>
+                                                </h4>
+                                                <p>{{ education.companySchool }}</p>
+                                                <div class="space32"></div>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="space20"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--===== ABOUT AREA ENDS =======-->
+                    </div>
+                    
+                    <div id="list-item-3">
+                        <!--===== SKILL AREA STARTS =======-->
+                        <div class="skill-section-area">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-gl-12">
+                                        <div class="skill-header heading1">
+                                            <h5 data-aos="fade-left" data-aos-duration="800"><img
+                                                src="assets/img/icons/sublogo1.svg" alt="">Mis Habilidades</h5>
+                                            <div class="space24"></div>
+                                            <h2 data-aos="fade-left" data-aos-duration="1000">
+                                                Las herramientas detrás de un
+                                            </h2>
+                                            <div class="space24"></div>
+                                            <h2 class="head" data-aos="fade-left" data-aos-duration="1100">
+                                                desarrollo <span>excepcional</span>
+                                            </h2>
+                                        </div>
+                                        <div class="space80"></div>
+                                        <div class="row">
+                                            @for (toolTechnology of data.sections.mySkills.toolsTechnologies; track toolTechnology.name) {
+                                                <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-duration="1000">
+                                                    <div class="skill-boxarea">
+                                                        <div class="icons">
+                                                            <img [src]="toolTechnology.icon" alt="">
+                                                        </div>
+                                                        <div class="space24"></div>
+                                                        <h3><span appCounter [countTo]="toolTechnology.percentage" class="counter"></span>%</h3>
+                                                        <div class="space16"></div>
+                                                        <p>{{ toolTechnology.name }}</p>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--===== SKILL AREA ENDS =======-->
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

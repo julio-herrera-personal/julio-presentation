@@ -1,0 +1,92 @@
+{
+  "pageConfig": {
+    "background": "assets/img/video/video2.mp4"
+  },
+  "generalInfo": {
+    "shortName": "Nombre Corto",
+    "fullName": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "shortDescription": "Descripción Corta",
+    "description": "Descripción Larga",
+    "socials": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/XXX"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/XXXX/"
+      }
+    ],
+    "assets": {
+      "profile": {
+        "image": "assets/img/all-images/julio/foto.JPG"
+      },
+      "cv": {
+        "url": "assets/files/cv/cv_2025.pdf",
+        "fileName": "cv_2025.pdf"
+      }
+    }
+  },
+  "sections": {
+    "home": {
+      "title": "Hola, soy <Nombre corto>...",
+      "subtitle": {
+        "part1": "Parte 1",
+        "part2": "parte 2",
+        "part3": "parte 3"
+      },
+      "description": "Descripción"
+    },
+    "aboutMe": {
+      "title": "Sobre mí",
+      "subtitle": {
+        "part1": "Parte 1",
+        "part2": "parte 2",
+        "part3": "parte 3"
+      },
+      "review": {
+        "title": "Nombre",
+        "description": "Descripción personal"
+      },
+      "principals": [
+        {
+          "icon": "assets/img/icons/home3.svg",
+          "title": "Java, Spring Boot",
+          "description": "Creación de aplicaciones robustas y seguras con arquitectura escalable, optimizando procesos mediante servicios backend eficientes y confiables."
+        }
+      ],
+      "workExperience": [
+        {
+          "period": "Jul 2022 - Ago 2025",
+          "url": "https://www.banregio.com/",
+          "positionTitle": "Analista Programador SR B",
+          "companySchool": "Grupo Financiero Banregio"
+        }
+      ],
+      "educations": [
+        {
+          "period": "Sep 2025 - Actualidad",
+          "positionTitle": "Maestría en Tecnologías de la Información",
+          "url": "https://ieu.edu.mx/oferta-academica/maestrias/tecnologias-de-la-informacion/",
+          "companySchool": "IEU Universidad"
+        }
+      ]
+    },
+    "mySkills": {
+      "title": "Mis Habilidades",
+      "subtitle": {
+        "part1": "Parte 1",
+        "part2": "parte 2",
+        "part3": "parte 3"
+      },
+      "toolsTechnologies": [
+        {
+          "icon": "assets/img/icons/skill2.svg",
+          "name": "Java",
+          "percentage": 92
+        }
+      ]
+    }
+  }
+}
