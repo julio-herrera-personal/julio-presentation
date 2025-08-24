@@ -3,40 +3,40 @@
     "background": "assets/img/video/video2.mp4"
   },
   "generalInfo": {
-    "shortName": "Nombre Corto",
-    "fullName": "Nombre Completo",
-    "email": "Correo Electrónico",
-    "shortDescription": "Descripción Corta",
-    "description": "Descripción Larga",
+    "shortName": "Julio Herrera",
+    "fullName": "Julio Cesar Herrera Gutierrez",
+    "email": "j.herrrera@hotmail.com",
+    "shortDescription": "Senior Java Backend",
+    "description": "Senior Java Backend Developer | Microservices | Spring Boot |.NET | DevOps",
     "socials": [
       {
         "name": "facebook",
-        "url": "https://www.facebook.com/XXX"
+        "url": "https://www.facebook.com/JulioHerreraG"
       },
       {
         "name": "linkedin",
-        "url": "https://www.linkedin.com/in/XXXX/"
+        "url": "https://www.linkedin.com/in/julio-cesar-herrera-gutierrez-798a96159"
       }
     ],
     "assets": {
       "profile": {
-        "image": "assets/img/all-images/julio/foto.JPG"
+        "image": "assets/img/all-images/julio/foto.jpg"
       },
       "cv": {
-        "url": "assets/files/cv/cv_2025.pdf",
+        "url": "assets/files/cv/",
         "fileName": "cv_2025.pdf"
       }
     }
   },
   "sections": {
     "home": {
-      "title": "Hola, soy <Nombre corto>...",
+      "title": "Hola, soy Julio",
       "subtitle": {
         "part1": "Parte 1",
         "part2": "parte 2",
         "part3": "parte 3"
       },
-      "description": "Descripción"
+      "description": "Desarrollador Java"
     },
     "aboutMe": {
       "title": "Sobre mí",
